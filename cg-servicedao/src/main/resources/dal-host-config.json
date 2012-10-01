@@ -1,0 +1,33 @@
+{
+    "version":1,
+    "roleDefinitions":
+    [
+        {
+            "name":"mystuff",
+            "dataStoreType":"cassandra",
+            "hostIdentifiers":
+            [
+                {
+                    "id":"wmt-cas-cww",
+                    "metric":1
+                }
+            ]
+        }
+    ],
+    "hostDefinitions":
+    [
+        {
+            "id":"wmt-cas-cww",
+            "hostname":"cerl400038.wal-mart.com",
+            "port":9160,
+            "solrPort":8983,
+            "namespace":"CustomerKnowledge",
+            "numRetries":8,
+            "numConcurrentConnections":10,
+            "cassandraHostOptions":
+            {
+                "cluster":"Customer"
+            }
+        }
+    ]
+}
